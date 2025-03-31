@@ -1,0 +1,131 @@
+/* Variables de couleurs pour le thème sombre */
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #3498db;
+    --error-color: #e74c3c;
+    --input-bg: #2a2a2a;
+    --input-border: #3a3a3a;
+    --button-hover: #2980b9;
+  }
+  
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style du formulaire de connexion */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto 30px;
+    max-width: 400px;
+  }
+  
+  .signup-form h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: var(--accent-color);
+  }
+  
+  /* Style des champs de saisie */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    max-width: 350px;
+    padding: 14px;
+    margin: 10px auto;
+    display: block;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+  }
+  
+  input::placeholder {
+    color: var(--text-secondary);
+  }
+  
+  /* Style du message d'erreur */
+  p[style*="color: red"] {
+    color: var(--error-color) !important;
+    text-align: center;
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  
+  /* Style du bouton */
+  button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  /* Conteneur principal */
+  .connexion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Animation pour les champs de saisie */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  input,
+  button {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  input:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  input:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  button {
+    animation-delay: 0.3s;
+  }
