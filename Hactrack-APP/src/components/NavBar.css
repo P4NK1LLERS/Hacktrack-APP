@@ -19,7 +19,8 @@
   padding: 0;
   display: flex;
   gap: 30px;
-  align-items: center; /* Alignement vertical */
+  align-items: center;
+  /* Alignement vertical */
 }
 
 /* Style des éléments de la liste */
@@ -29,7 +30,8 @@
 
 /* Style des liens */
 .navbar ul li a,
-.logout-button {  /* Appliquer le même style aux liens et au bouton */
+.logout-button {
+  /* Appliquer le même style aux liens et au bouton */
   color: white;
   text-decoration: none;
   font-size: 18px;
